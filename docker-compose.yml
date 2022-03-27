@@ -1,0 +1,12 @@
+---
+version: "2"
+services:
+  elevatorsaga:
+    build: .
+    container_name: elevatorsaga
+    ports:
+      - 8081:80
+    environment:
+      - UID=1000
+      - GID=1000
+    restart: unless-stopped
